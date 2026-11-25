@@ -1,0 +1,30 @@
+package org.goya.daw2.dwes.d3_ud3;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@SpringBootApplication
+@Controller
+public class Controlador {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Controlador.class, args);
+	}
+	
+	@GetMapping(value={"/","home"})
+	public String inicio() {
+		return "home";
+	}
+	@GetMapping("/hello")
+	public String bienvenida() {
+		return "hello";
+	}
+	@GetMapping("/login2")
+	public String login() {
+		return "login";
+	}
+
+}
